@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "PANEL",
+  "usingComponents": {
+    "zhkUI-panel": "/zhkUI/panel/panel"
+  }
+}

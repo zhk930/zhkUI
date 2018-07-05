@@ -1,0 +1,68 @@
+/*
+creator: ZHK
+components:zhkUI
+name: notify
+*/
+@import "../assets/wxss/zhkUI.wxss";
+
+.zhkui-tab-view{
+  position: relative;
+  width: 750rpx;
+  height:90rpx;
+  text-align: center;
+  display:inline-flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  /* background: #f2f2f2; */
+}
+
+.zhkui-tab-view .zhkui-tab-item{
+  height: 100%;
+  display:inline-flex;
+}
+
+.zhkui-tab-view .zhkui-tab{
+  display: block;
+  width: 70%;
+  margin-left:15%;
+  height:60rpx;
+  line-height: 60rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  margin-top:15rpx;
+}
+
+.zhkui-tab-view .text-disable{
+  font-size:34rpx;
+  border-radius: 0rpx;
+}
+.zhkui-tab-view .text-success,.text-info,.text-danger,.text-warn{
+  font-size:34rpx;
+  border-radius: 0rpx;
+}
+
+.zhkui-tab-view .bg-disable{
+  color:#6e6e6e;
+  font-size:30rpx;
+  border-radius: 60rpx;
+}
+.zhkui-tab-view .bg-success,.bg-info,.bg-danger,.bg-warn{
+  color: white;
+  font-size:30rpx;
+  border-radius: 60rpx;
+}
+
+.zhkui-tab-selected-line{
+  display: block;
+  position:absolute;
+  width: 80rpx;
+  height: 20rpx;
+  top:82rpx;
+  z-index: 2;
+  transition:left 0.3s;
+  border-radius: 40rpx;
+}

@@ -1,0 +1,64 @@
+/*
+creator: ZHK
+components:zhkUI
+name: badge
+*/
+@import "../assets/wxss/zhkUI.wxss";
+
+.zhkui-badge{
+  display:inline-flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.zhkui-badge.WHITE{
+  background: rgba(160,160,160,1.0) !important;
+  color:white;
+}
+
+.zhkui-badge.DANGER{
+  background: rgba(217,83,79,1.0) !important;
+  color:white;
+}
+
+.zhkui-badge.SUCCESS{
+  background: rgba(92,184,92,1.0) !important;
+  color:white;
+}
+
+.zhkui-badge.INFO{
+  background: rgba(91,192,222,1.0) !important;
+  color:white;
+}
+
+.zhkui-badge.WARN{
+  background: rgba(240,173,78,1.0) !important;
+  color:white;
+}
+
+.zhkui-badge.MINI{
+  font-size:19rpx;
+  height:30rpx;
+  border-radius: 15rpx;
+  padding:0rpx 8rpx;
+  min-width: 17rpx;
+}
+
+.zhkui-badge.SMALL{
+  font-size:26rpx;
+  height:40rpx;
+  border-radius: 20rpx;
+  padding:0rpx 10rpx;
+  min-width: 22rpx;
+}
+
+.zhkui-badge.LARGE{
+  font-size:39rpx;
+  height:60rpx;
+  border-radius: 30rpx;
+  padding:0rpx 15rpx;
+  min-width: 32rpx;
+}

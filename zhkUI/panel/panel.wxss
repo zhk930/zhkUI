@@ -1,0 +1,33 @@
+/*
+creator: ZHK
+components:zhkUI
+name: panel
+*/
+@import "../assets/wxss/zhkUI.wxss";
+
+.zhkui-panel{
+  display: flex;
+  flex-direction: column;
+}
+
+.zhkui-panel .zhkui-panel-title{
+  padding:30rpx;
+  color: #666;
+  font-size:30rpx;
+}
+
+.zhkui-panel .zhkui-panel-body{
+  padding:30rpx;
+  background: white;
+  border-top:1rpx transparent solid;
+  border-bottom:1rpx transparent solid;
+}
+
+.zhkui-panel .zhkui-panel-border{
+  border-top:1rpx #eee solid;
+  border-bottom:1rpx #eee solid;  
+}
+
+.zhkui-panel .zhkui-panel-nopadding{
+  padding:0 !important;
+}

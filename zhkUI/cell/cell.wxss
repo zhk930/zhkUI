@@ -1,0 +1,45 @@
+/*
+creator: ZHK
+components:zhkUI
+name: cell
+*/
+@import "../assets/wxss/zhkUI.wxss";
+
+.zhkui-cell{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding:30rpx 30rpx 30rpx 0rpx;
+  margin-left:30rpx;
+  border-bottom: 0.1rpx #eee solid;
+}
+.zhkui-cell-last{
+  border-bottom: 0.1rpx transparent solid;
+}
+
+.zhkui-cell-text{
+  display: flex;
+  flex-direction:column;
+  flex:1;
+}
+
+.zhkui-cell-title{
+  font-size:30rpx;
+  color: #333;
+}
+
+.zhkui-cell-label{
+  font-size:24rpx;
+  color: #999;
+}
+
+.zhkui-cell-value{
+  font-size:30rpx;
+  color: #333;
+  text-align: right;
+}
+
+.zhkui-cell-value i{
+  font-size:26rpx;
+  color: #cdcdcd;
+}

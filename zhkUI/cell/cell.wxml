@@ -1,0 +1,18 @@
+<!--
+/*
+creator: ZHK
+components:zhkUI
+name: cell
+*/
+-->
+<view class="zhkui-cell {{ _isLastCell ? 'zhkui-cell-last' : '' }}" bindtap='_bindtap'>
+  <view class='zhkui-cell-text'>
+    <view class='zhkui-cell-title'>{{_title}}</view>
+    <view class='zhkui-cell-label'>{{_label}}</view>
+  </view>  
+  <view class='zhkui-cell-value'>
+    {{_value}}
+    <zhkUI-badge type="{{_badgeType}}" text="{{_badge}}"></zhkUI-badge>
+    <block wx:if="{{_link}}"><zhkUI-icon name="icon-right"></zhkUI-icon></block>
+  </view>
+</view>

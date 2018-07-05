@@ -1,0 +1,10 @@
+<!--pages/p-cell/p-cell.wxml-->
+<zhkUI-panel title="基础控件" noPadding>
+  <zhkUI-cell-group>
+    <zhkUI-cell title="Button" link linkUrl="../p-button/p-button"></zhkUI-cell>
+    <zhkUI-cell title="Cell" link linkUrl="../p-cell/p-cell"></zhkUI-cell>
+    <zhkUI-cell title="Panel" link linkUrl="../p-panel/p-panel"></zhkUI-cell>
+    <zhkUI-cell title="Title" link linkUrl="../p-title/p-title"></zhkUI-cell>
+    <zhkUI-cell title="More" link linkUrl="../p-more/p-more"></zhkUI-cell>
+  </zhkUI-cell-group>
+</zhkUI-panel>

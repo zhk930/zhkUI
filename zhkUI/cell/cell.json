@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "zhkUI-icon": "../icon/icon",
+    "zhkUI-badge": "../badge/badge"
+  }
+}

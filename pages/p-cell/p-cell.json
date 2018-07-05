@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "CELL",
+  "usingComponents": {
+    "zhkUI-panel": "/zhkUI/panel/panel",
+    "zhkUI-cell-group": "/zhkUI/cell-group/cell-group",
+    "zhkUI-cell": "/zhkUI/cell/cell"
+  }
+}

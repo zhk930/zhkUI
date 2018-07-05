@@ -1,0 +1,11 @@
+<!--
+/*
+creator: ZHK
+components:zhkUI
+name: topTip
+*/
+-->
+<view class='zhkui-topTip-view' animation="{{animationData}}">
+  <view class='zhkui-topTip-msg {{backgroundClass}}'>{{ message }}</view>
+</view>
+

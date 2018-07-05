@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "zhkUI-dialog": "/zhkUI/dialog/dialog",
+    "zhkUI-toast": "/zhkUI/toast/toast",
+    "zhkUI-icon": "/zhkUI/icon/icon",
+    "zhkUI-notify": "/zhkUI/notify/notify",
+    "zhkUI-topTip": "/zhkUI/topTip/topTip",
+    "zhkUI-tab": "/zhkUI/tab/tab",
+    "zhkUI-button": "/zhkUI/button/button",
+    "zhkUI-loading": "/zhkUI/loading/loading"
+  }
+}

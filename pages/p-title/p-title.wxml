@@ -1,0 +1,12 @@
+<!--pages/p-title/p-title.wxml-->
+<zhkUI-title title="标题" label="描述" rounded></zhkUI-title>
+<zhkUI-title title="标题" label="描述" type="WARN" rounded></zhkUI-title>
+<zhkUI-title title="标题" label="描述" type="SUCCESS" rounded></zhkUI-title>
+<zhkUI-title title="标题" label="描述" type="INFO" rounded></zhkUI-title>
+<zhkUI-title title="标题" label="描述" type="DANGER" rounded></zhkUI-title>
+
+<zhkUI-title title="标题" label="描述"></zhkUI-title>
+<zhkUI-title title="标题" label="描述" type="WARN"></zhkUI-title>
+<zhkUI-title title="标题" label="描述" type="SUCCESS"></zhkUI-title>
+<zhkUI-title title="标题" label="描述" type="INFO"></zhkUI-title>
+<zhkUI-title title="标题" label="描述" type="DANGER"></zhkUI-title>

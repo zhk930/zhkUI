@@ -1,0 +1,6 @@
+/* pages/button/button.wxss */
+
+
+zhkui-button{
+  margin:8rpx;
+}

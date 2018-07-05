@@ -1,0 +1,26 @@
+/*
+creator: ZHK
+components:zhkUI
+name: toast
+*/
+
+.zhkui-toast-view{
+  position: fixed;
+  z-index: 2000;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.0);
+  text-align: center;
+  opacity: 0;
+}
+
+.zhkui-toast-msg{
+  display: inline-block;
+  max-width: 400rpx;
+  background: rgba(0, 0, 0, 0.8); 
+  padding: 20rpx 50rpx;
+  border-radius: 50rpx;
+  color: white;
+  font-size:32rpx;
+  text-align: center;
+}

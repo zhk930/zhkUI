@@ -1,0 +1,37 @@
+<!--pages/p-cell/p-cell.wxml-->
+<zhkUI-panel title="Cell" noPadding>
+  <zhkUI-cell-group>
+    <zhkUI-cell title="标题" label="备注" value="这是值"></zhkUI-cell>
+    <zhkUI-cell title="去BUTTON" link linkUrl="../p-button/p-button"></zhkUI-cell>
+    <zhkUI-cell title="标题1" value="这是值内容" link bindtap="bindtapA" data-id="方式发送到发送到"></zhkUI-cell>
+    <zhkUI-cell title="标题1" link></zhkUI-cell>
+    <zhkUI-cell title="标题1" badge="99+" badgeType="WARN"></zhkUI-cell>
+    <zhkUI-cell title="标题1" link badge="5"></zhkUI-cell>
+  </zhkUI-cell-group>
+</zhkUI-panel>
+<zhkUI-panel title="Cell1" noBorder noPadding>  
+  <zhkUI-cell title="标题A" label="备注" value="有备注" link></zhkUI-cell>
+</zhkUI-panel>
+<zhkUI-panel title="Cell2" noPadding>  
+  <zhkUI-cell title="标题" label="" value="无备注" badge="99+"></zhkUI-cell>
+</zhkUI-panel>
+<zhkUI-panel title="Cell2" noPadding>  
+  <zhkUI-cell title="标题" label="" value="无备注" badge="99+"></zhkUI-cell>
+</zhkUI-panel>
+<zhkUI-panel title="Cell2" noPadding>  
+  <zhkUI-cell title="标题" label="" value="无备注" badge="99+"></zhkUI-cell>
+</zhkUI-panel>
+<zhkUI-panel title="Cell2" noPadding>  
+  <zhkUI-cell title="标题" label="" value="无备注" badge="99+"></zhkUI-cell>
+</zhkUI-panel>
+<zhkUI-panel title="Cell2" noPadding>  
+  <zhkUI-cell title="标题" label="" value="无备注" badge="99+"></zhkUI-cell>
+</zhkUI-panel>
+<zhkUI-panel title="Cell2" noPadding>  
+  <zhkUI-cell title="标题" label="" value="无备注" badge="99+"></zhkUI-cell>
+</zhkUI-panel>
+<zhkUI-panel title="Cell2" noPadding>  
+  <zhkUI-cell title="标题" label="" value="无备注" badge="99+"></zhkUI-cell>
+</zhkUI-panel>
+
+<zhkUI-badge text="43"></zhkUI-badge>

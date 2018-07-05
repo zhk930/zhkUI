@@ -1,0 +1,12 @@
+<!--
+/*
+creator: ZHK
+components:zhkUI
+name: badge
+*/
+-->
+ <block wx:if="{{text != ''}}">
+  <view class='zhkui-badge {{type}} {{size}}'>
+    {{text}}
+  </view>
+</block> 

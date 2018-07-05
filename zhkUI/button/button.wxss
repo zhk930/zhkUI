@@ -1,0 +1,129 @@
+/*
+creator: ZHK
+components:zhkUI
+name: button
+*/
+@import "../assets/wxss/zhkUI.wxss";
+@import "../loading/loading.wxss";
+
+.zhkui-btn{
+  border:none;
+  border-radius: 0rpx;  
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.zhkui-btn::after {
+  border: none;
+}
+
+.zhkui-btn-large{
+  display: block;
+  font-size:40rpx;
+  line-height: 110rpx;
+  height: 110rpx;
+}
+
+.zhkui-btn-large .zhkui-loading{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left:20rpx;
+}
+
+.zhkui-btn-large i{
+  font-size:40rpx;
+}
+
+.zhkui-btn-small{
+  text-align: center;
+  display: inline-flex;
+  font-size:33rpx;
+  padding:0rpx 30rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.zhkui-btn-small .zhkui-loading{
+  width: 33rpx;
+  height: 33rpx;
+  margin-left:17rpx;
+}
+
+.zhkui-btn-small i{
+  font-size:33rpx;
+}
+
+.zhkui-btn-small-circle{
+  text-align: center;
+  display: inline-flex;
+  font-size:33rpx;
+  padding:0rpx 0rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 70rpx;
+}
+
+.zhkui-btn-small-circle i{
+  font-size:33rpx;
+}
+
+.zhkui-btn-mini{
+  text-align: center;
+  display: inline-flex;
+  font-size:22rpx;
+  padding:0rpx 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.zhkui-btn-mini i{
+  font-size:22rpx;
+}
+
+.zhkui-btn-mini-circle{
+  text-align: center;
+  display: inline-flex;
+  font-size:22rpx;
+  padding:0rpx 0rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 40rpx;
+}
+
+.zhkui-btn-mini-circle i{
+  font-size:22rpx;
+}
+
+.zhkui-btn-small .zhkui-btn-loading{
+  margin-top:3rpx;
+  width:60rpx;height:60rpx;
+}
+
+.zhkui-btn-small-circle .zhkui-btn-loading{
+  margin-top:3rpx;
+  width:60rpx;height:60rpx;
+}
+
+.zhkui-btn-mini .zhkui-btn-loading{
+  width:15rpx;
+  height:15rpx;
+}
+
+.zhkui-btn-mini-circle .zhkui-btn-loading{
+  width:15rpx;
+  height:15rpx;
+}
+

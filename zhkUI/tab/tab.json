@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "zhkUI-icon": "/zhkUI/icon/icon"
+  }
+}

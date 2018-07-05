@@ -1,0 +1,7 @@
+/*
+creator: ZHK
+components:zhkUI
+name: icon
+*/
+
+@import "../assets/wxss/zhkui-iconfont.wxss";

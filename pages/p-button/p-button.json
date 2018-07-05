@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "BUTTON",
+  "usingComponents": {
+    "zhkUI-button": "/zhkUI/button/button",
+    "zhkUI-icon": "/zhkUI/icon/icon"
+  }
+}

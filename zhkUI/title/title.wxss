@@ -1,0 +1,37 @@
+/*
+creator: ZHK
+components:zhkUI
+name: title
+*/
+@import "../assets/wxss/zhkUI.wxss";
+
+.zhkui-title{
+  display: flex;
+  flex-direction: row;
+  padding: 30rpx;
+}
+
+.zhkui-title .zhkui-title-block{
+  display: block;
+  width: 14rpx;
+  height: 40rpx;
+}
+
+.zhkui-title .zhkui-title-block-rounded{
+  border-radius: 14rpx;
+}
+
+.zhkui-title .zhkui-title-title{
+  line-height: 40rpx;
+  padding-left:20rpx;
+  font-size:36rpx;
+  color: black;
+}
+
+.zhkui-title .zhkui-title-label{
+  height: 40rpx;
+  padding-top:6rpx;
+  padding-left:20rpx;
+  font-size:26rpx;
+  color: #999;
+}

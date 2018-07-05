@@ -1,0 +1,12 @@
+<!--
+/*
+creator: ZHK
+components:zhkUI
+name: title
+*/
+-->
+<view class='zhkui-title'>
+  <view class='zhkui-title-block {{_blockBg}} {{_rounded}}'></view>
+  <view class='zhkui-title-title'>{{_title}}</view>
+  <view class='zhkui-title-label'>{{_label}}</view>
+</view>

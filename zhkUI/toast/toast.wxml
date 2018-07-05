@@ -1,0 +1,11 @@
+<!--
+/*
+creator: ZHK
+components:zhkUI
+name: toast
+*/
+-->
+<view class='zhkui-toast-view' animation="{{animationData}}" style='{{style}}'>
+  <view class='zhkui-toast-msg'>{{ message }}</view>
+</view>
+

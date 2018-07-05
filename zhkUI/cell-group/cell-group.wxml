@@ -1,0 +1,10 @@
+<!--
+/*
+creator: ZHK
+components:zhkUI
+name: cell-group
+*/
+-->
+<view class='zhkui-cell-group'>
+  <slot></slot>
+</view>

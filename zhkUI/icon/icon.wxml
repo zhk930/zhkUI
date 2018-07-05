@@ -1,0 +1,8 @@
+<!--
+/*
+creator: ZHK
+components:zhkUI
+name: icon
+*/
+-->
+<i class='zhkui-icon {{iconfont}} {{name}}' style="{{customStyle}}"></i>

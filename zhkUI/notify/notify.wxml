@@ -1,0 +1,13 @@
+<!--
+/*
+creator: ZHK
+components:zhkUI
+name: notify
+*/
+-->
+<view class='zhkui-notify-view' animation="{{animationData}}" style='{{style}}'>
+  <view class='zhkui-notify-msg {{backgroundClass}}'>    
+    <zhkUI-icon name="{{icon}}" customStyle="font-size:50rpx;color:white;padding-right:20rpx;"></zhkUI-icon> {{ message }}
+  </view>
+</view>
+

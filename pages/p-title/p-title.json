@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "TITLE",
+  "usingComponents": {
+    "zhkUI-title": "/zhkUI/title/title"
+  }
+}

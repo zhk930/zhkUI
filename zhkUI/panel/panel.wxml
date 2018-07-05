@@ -1,0 +1,14 @@
+<!--
+/*
+creator: ZHK
+components:zhkUI
+name: panel
+*/
+-->
+
+<view class='zhkui-panel' style='margin-top:{{_marginTop}};margin-bottom:{{_marginBottom}}'>
+  <view class='zhkui-panel-title' style='display:{{_titleDisplay}}'>{{_title}}</view>
+  <view class='zhkui-panel-body {{_noBorder}} {{_noPadding}}'>
+    <slot></slot>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+<!--
+/*
+creator: ZHK
+components:zhkUI
+name: loading
+*/
+-->
+ <text class='zhkui-loading zhkui-loading-{{_pattern}}-{{_type}}' style='{{customStyle}}'></text> 

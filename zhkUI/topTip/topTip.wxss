@@ -1,0 +1,29 @@
+/*
+creator: ZHK
+components:zhkUI
+name: topTip
+*/
+@import "../assets/wxss/zhkUI.wxss";
+
+.zhkui-topTip-view{
+  position: fixed;
+  z-index: 2000;
+  right: 0;
+  left: 0;
+  text-align: center;
+  opacity: 0;
+  top:-20px;
+}
+
+.zhkui-topTip-msg{
+  display:inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  width: 96%;
+  padding: 10rpx 2%;
+  color: white;
+  font-size:32rpx;
+  text-align: center;
+}

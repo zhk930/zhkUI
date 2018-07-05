@@ -1,0 +1,27 @@
+/*
+creator: ZHK
+components:zhkUI
+name: notify
+*/
+@import "../assets/wxss/zhkUI.wxss";
+
+.zhkui-notify-view{
+  position: fixed;
+  z-index: 2000;
+  right: 0;
+  left: 0;
+  text-align: center;
+  opacity: 0;
+}
+
+.zhkui-notify-msg{
+  display:inline-flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 600rpx;
+  padding: 20rpx 50rpx;
+  border-radius: 10rpx;
+  color: white;
+  font-size:32rpx;
+  text-align: center;
+}

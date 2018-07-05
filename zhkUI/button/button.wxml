@@ -1,0 +1,11 @@
+<!--
+/*
+creator: ZHK
+components:zhkUI
+name: button
+*/
+-->
+<button class='zhkui-btn {{_type}} {{_size}}' open-type='{{openType}}' style='border-radius:{{_radius}}rpx;opacity:{{_disabledAlpha}}' disabled="{{_disabled}}" bindtouchstart='_bindtouchstart' bindtouchend='_bindtouchend'>
+  <text wx:if="{{_loadingShow}}" class="zhkui-btn-loading zhkui-loading zhkui-loading-oval-{{_loadingType}}"></text>
+  <block wx:else><slot></slot></block>
+</button>

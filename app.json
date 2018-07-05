@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/p-cell/p-cell",
+    "pages/p-title/p-title",
+    "pages/p-panel/p-panel",
+    "pages/p-button/p-button",
+    "pages/p-more/p-more",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarTitleText": "AAAA",
+    "navigationBarTextStyle": "black"
+  }
+}

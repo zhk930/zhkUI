@@ -1,0 +1,95 @@
+<!--pages/button/button.wxml-->
+<view>
+
+  <view>类型</view>  
+  <zhkUI-button id="buttonA" type="DANGER" size="MINI">确定</zhkUI-button>
+  <zhkUI-button id="buttonA" type="INFO" size="MINI">确定</zhkUI-button>
+  <zhkUI-button id="buttonA" type="SUCCESS" size="MINI">确定</zhkUI-button>
+  <zhkUI-button id="buttonA" type="WARN" size="MINI">确定</zhkUI-button>
+  <zhkUI-button id="buttonA" type="DANGER" size="MINI" loading>确定</zhkUI-button>
+
+  <view>BUTTON MINI RADIUS</view> 
+  <zhkUI-button id="button" type="DANGER" size="MINI" radius="10">确定</zhkUI-button>
+  <zhkUI-button id="button" type="INFO" size="MINI" radius="10">确定</zhkUI-button>
+  <zhkUI-button id="button" type="SUCCESS" size="MINI" radius="10">确定</zhkUI-button>
+  <zhkUI-button id="button" type="WARN" size="MINI" radius="10">确定</zhkUI-button>
+  <zhkUI-button id="button" type="WARN" size="MINI" radius="10" loading>确定</zhkUI-button>
+
+  <view>BUTTON MINI ROUNDED</view>  
+  <zhkUI-button id="buttonA" type="DANGER" pattern="ROUNDED" size="MINI">确定</zhkUI-button>
+  <zhkUI-button id="buttonA" type="INFO" pattern="ROUNDED" size="MINI">确定</zhkUI-button>
+  <zhkUI-button id="buttonA" type="SUCCESS" pattern="ROUNDED" size="MINI">确定</zhkUI-button>
+  <zhkUI-button id="buttonA" type="WARN" pattern="ROUNDED" size="MINI">确定</zhkUI-button>
+  <zhkUI-button id="buttonA" type="INFO" pattern="ROUNDED" size="MINI" loading>确定</zhkUI-button>
+
+  <view>BUTTON MINI GHOST</view> 
+  <zhkUI-button id="button" type="DANGER" size="MINI" ghost>确定</zhkUI-button>
+  <zhkUI-button id="button" type="INFO" size="MINI" ghost>确定</zhkUI-button>
+  <zhkUI-button id="button" type="SUCCESS" size="MINI" ghost>确定</zhkUI-button>
+  <zhkUI-button id="button" type="WARN" size="MINI" ghost>确定</zhkUI-button>
+  <zhkUI-button id="button" type="SUCCESS" size="MINI" ghost loading>确定</zhkUI-button>
+
+  <view>BUTTON MINI GHOST RADIUS</view> 
+  <zhkUI-button id="button" type="DANGER" size="MINI" radius="10" ghost>确定</zhkUI-button>
+  <zhkUI-button id="button" type="INFO" size="MINI" radius="10" ghost>确定</zhkUI-button>
+  <zhkUI-button id="button" type="SUCCESS" size="MINI" radius="10" ghost>确定</zhkUI-button>
+  <zhkUI-button id="button" type="WARN" size="MINI" radius="10" ghost>确定</zhkUI-button>
+  <zhkUI-button id="button" type="DANGER" size="MINI" radius="10" ghost loading>确定</zhkUI-button>
+
+  <view>BUTTON MINI GHOST ROUNDED</view> 
+  <zhkUI-button id="button" type="DANGER" pattern="ROUNDED" size="MINI" ghost>确定</zhkUI-button>
+  <zhkUI-button id="button" type="INFO" pattern="ROUNDED" size="MINI" ghost>确定</zhkUI-button>
+  <zhkUI-button id="button" type="SUCCESS" pattern="ROUNDED" size="MINI" ghost>确定</zhkUI-button>
+  <zhkUI-button id="button" type="WARN" pattern="ROUNDED" size="MINI" ghost>确定</zhkUI-button>
+  <zhkUI-button id="button" type="WARN" pattern="ROUNDED" size="MINI" ghost loading>确定</zhkUI-button>
+
+  <view>BUTTON MINI CIRCLE</view> 
+  <zhkUI-button id="button" type="DANGER" pattern="CIRCLE" size="MINI">
+    <zhkUI-icon name="icon-home"></zhkUI-icon>
+  </zhkUI-button>
+  <zhkUI-button id="button" type="INFO" pattern="CIRCLE" size="MINI">
+    <zhkUI-icon name="icon-home"></zhkUI-icon>
+  </zhkUI-button>
+  <zhkUI-button id="button" type="SUCCESS" pattern="CIRCLE" size="MINI">
+    <zhkUI-icon name="icon-home"></zhkUI-icon>
+  </zhkUI-button>
+  <zhkUI-button id="button" type="WARN" pattern="CIRCLE" size="MINI">
+    <zhkUI-icon name="icon-home"></zhkUI-icon>
+  </zhkUI-button>
+  <zhkUI-button id="button" type="DANGER" pattern="CIRCLE" size="MINI" ghost>
+    <zhkUI-icon name="icon-home"></zhkUI-icon>
+  </zhkUI-button>
+  <zhkUI-button id="button" type="INFO" pattern="CIRCLE" size="MINI" ghost>
+    <zhkUI-icon name="icon-home"></zhkUI-icon>
+  </zhkUI-button>
+  <zhkUI-button id="button" type="SUCCESS" pattern="CIRCLE" size="MINI" ghost>
+    <zhkUI-icon name="icon-home"></zhkUI-icon>
+  </zhkUI-button>
+  <zhkUI-button id="button" type="WARN" pattern="CIRCLE" size="MINI" ghost>
+    <zhkUI-icon name="icon-home"></zhkUI-icon>
+  </zhkUI-button>
+  <zhkUI-button id="button" type="DANGER" pattern="CIRCLE" size="MINI" loading>
+    <zhkUI-icon name="icon-home"></zhkUI-icon>
+  </zhkUI-button>
+  <zhkUI-button id="button" type="SUCCESS" pattern="CIRCLE" size="MINI" ghost loading>
+    <zhkUI-icon name="icon-home"></zhkUI-icon>
+  </zhkUI-button>
+
+  <view>BUTTON DEFAULT</view>
+  <zhkUI-button id="button" type="WARN" pattern="CIRCLE" size="DEFAULT" ghost>
+    <zhkUI-icon name="icon-home"></zhkUI-icon>
+  </zhkUI-button>
+
+  <zhkUI-button id="button" type="WARN" pattern="CIRCLE" size="DEFAULT">
+    <zhkUI-icon name="icon-home"></zhkUI-icon>
+  </zhkUI-button>
+
+  <zhkUI-button id="button" type="WARN" pattern="CIRCLE" size="DEFAULT" ghost data-ftp="xxxxxxxx" bindtap='aaa'>
+    <zhkUI-icon name="icon-home"></zhkUI-icon>
+  </zhkUI-button>
+
+  <zhkUI-button id="button" type="WARN" pattern="ROUNDED" size="DEFAULT" openType="share">
+    <zhkUI-icon name="icon-home"></zhkUI-icon> 首页
+  </zhkUI-button>
+
+</view>

@@ -1,0 +1,3 @@
+<!--pages/home/home.wxml-->
+<zhkUI-panel id="panelA" title="标题1" top="100rpx" bottom="0rpx">不带边框</zhkUI-panel>
+<zhkUI-panel id="panelB" title="" top="100rpx" border>带边框</zhkUI-panel>

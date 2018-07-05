@@ -1,0 +1,23 @@
+<!--
+/*
+creator: ZHK
+components:zhkUI
+name: tab
+*/
+-->
+<scroll-view class="zhkui-tab-view" scroll-x="true" scroll-with-animation="true" scroll-into-view="{{scrollInto}}">
+  <block wx:for="{{listData}}" wx:key="id" wx:for-index="index">
+    <block wx:if='{{pattern == "LINE"}}'>
+      <view id='item-{{index}}' class='zhkui-tab-item' style='width:{{itemWidth}}rpx;opacity:{{btnOpacity[index]}}' data-index="{{index}}" catchtap='_catchtap' bindtouchstart='_bindtouchstart' bindtouchend='_bindtouchend'>
+        <view class='zhkui-tab {{item.classes}}'>{{item.title}}</view>
+      </view>
+    </block>
+    <block wx:else>
+      <view id='item-{{index}}' class='zhkui-tab-item' style='width:{{itemWidth}}rpx;opacity:{{btnOpacity[index]}}' data-index="{{index}}" catchtap='_catchtap' bindtouchstart='_bindtouchstart' bindtouchend='_bindtouchend'>
+        <view class='zhkui-tab {{item.classes}}'>{{item.title}}</view>
+      </view>
+    </block>
+  </block>
+  <view class='zhkui-tab-selected-line {{selectedLinePattern}}' style='display:{{selectedLineDisplay}};left:{{selectedLineLeft}}rpx;'></view>
+</scroll-view>
+
