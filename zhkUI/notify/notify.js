@@ -3,7 +3,7 @@ creator: ZHK
 components:zhkUI
 name: notify
 */
-var that
+var SetTimeout
 
 Component({
   options: {
@@ -25,7 +25,7 @@ Component({
     }, 
     // 出现位置(TOP/BOTTOM)
     direction: { 
-      type: String, value: 'BOTTOM' 
+      type: String, value: 'TOP' 
     }
   }, 
   /** * 私有数据,组件的初始数据 * 可用于模版渲染 */ 
@@ -41,7 +41,7 @@ Component({
   /** * 组件的方法列表 * 更新属性和数据的方法与更新页面数据的方法类似 */ 
   methods: { 
     //显示 
-    show(options){
+    show(options) {
       var obj = options == undefined ? {} : options
       this.setData({
         message: obj.message == undefined ? this.properties.message : obj.message
@@ -82,15 +82,17 @@ Component({
         duration: 500,
         timingFunction: 'ease',
       })
+      clearTimeout(SetTimeout)
+      //显示动画
       animation.opacity(1).translateY(-y).step()
       this.setData({
         animationData: animation.export(),
         icon: icon,
         backgroundClass: backgroundClass
       })
-      that = this
       //延时隐藏
-      setTimeout(function () {
+      var that = this
+      SetTimeout = setTimeout(function () {
         var animation = wx.createAnimation({
           duration: 500,
           timingFunction: 'ease',
@@ -101,5 +103,5 @@ Component({
         })
       }, duration)
     }
-  } 
+  }
 })

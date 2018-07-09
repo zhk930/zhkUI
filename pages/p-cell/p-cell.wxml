@@ -1,4 +1,6 @@
-<!--pages/p-cell/p-cell.wxml-->
+
+<view class='h1'>CELL</view>
+
 <zhkUI-panel title="Cell" noPadding>
   <zhkUI-cell-group>
     <zhkUI-cell title="标题" label="备注" value="这是值"></zhkUI-cell>

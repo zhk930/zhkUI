@@ -19,11 +19,11 @@ Component({
   properties: {
     //样式
     pattern:{
-      type: String, value: 'BUTTON'
+      type: String, value: 'LINE' //BUTTON/LINE
     },
     //类型
     type: {
-      type: String, value: 'DANGER'
+      type: String, value: 'DANGER' //DANGER/INFO/SUCCESS/WARN
     },
     //一屏幕宽度包含几个元素
     col: {
@@ -62,34 +62,34 @@ Component({
         return false
       }
       var list = obj.list == undefined ? this.data.listData : obj.list
-      var col = obj.col == undefined ? Col : obj.col
+      var col = obj.col == undefined ? this.Col : obj.col
       var _type = obj.type == undefined ? this.properties.type : obj.type
       var pattern = obj.pattern == pattern ? this.properties.pattern : obj.pattern
       var current = obj.current == current ? this.properties.current : obj.current
       this._init(list, col, _type, pattern, current)
     },
     //init
-    _init(list, col, _type, pattern, current){
+    _init(list, col, _type, pattern, current) {
       //col
       if (list.length < 5) {
-        Col = list.length
+        this.Col = list.length
       } else {
-        Col = col > 4 || col < 0 ? 4 : col //不能大于4小于0
+        this.Col = col > 4 || col < 0 ? 4 : col //不能大于4小于0
       }
       //selectedLinePattern
       var selectedLinePattern
       //classes
       if (_type == "SUCCESS") {
-        Classes = pattern == "LINE" ? "text-success" : "bg-success border-success"
+        this.Classes = pattern == "LINE" ? "text-success" : "bg-success border-success"
         selectedLinePattern = "bg-success"
       } else if (_type == "DANGER") {
-        Classes = pattern == "LINE" ? "text-danger" : "bg-danger border-danger"
+        this.Classes = pattern == "LINE" ? "text-danger" : "bg-danger border-danger"
         selectedLinePattern = "bg-danger"
       } else if (_type == "WARN") {
-        Classes = pattern == "LINE" ? "text-warn" : "bg-warn border-warn"
+        this.Classes = pattern == "LINE" ? "text-warn" : "bg-warn border-warn"
         selectedLinePattern = "bg-warn"
       } else {
-        Classes = pattern == "LINE" ? "text-info" : "bg-info border-info"
+        this.Classes = pattern == "LINE" ? "text-info" : "bg-info border-info"
         selectedLinePattern = "bg-info"
       }
       var btnOpacity = []
@@ -98,7 +98,7 @@ Component({
       }
       this.setData({
         listData: list,
-        itemWidth: parseInt(750 / Col),
+        itemWidth: parseInt(750 / this.Col),
         btnOpacity: btnOpacity,
         selectedLinePattern: selectedLinePattern,
       })
@@ -107,7 +107,7 @@ Component({
       }else{
         this.setData({ selectedLineDisplay: "none" })
       }
-      Pattern = pattern
+      this.Pattern = pattern
       this._change(current)
     },
     //按下监听
@@ -140,15 +140,15 @@ Component({
       var list = this.data.listData
       for (var i in list){
         if (i == index){
-          list[i]["classes"] = Classes
+          list[i]["classes"] = this.Classes
         }else{
-          list[i]["classes"] = Pattern == "LINE" ? "text-disable" : "bg-disable border-disable"
+          list[i]["classes"] = this.Pattern == "LINE" ? "text-disable" : "bg-disable border-disable"
         }        
       }
       this.setData({
         listData: list,
         scrollInto: "item-"+ (index-1),
-        selectedLineLeft: parseInt(750 / Col) * index + (parseInt(750 / Col) - 80) / 2
+        selectedLineLeft: parseInt(750 / this.Col) * index + (parseInt(750 / this.Col) - 30) / 2
       })
       //触发change回调 
       this.triggerEvent("changeEvent", { current: index, title: this.data.listData[index].title }) 

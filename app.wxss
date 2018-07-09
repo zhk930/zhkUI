@@ -6,3 +6,39 @@ page{
 .container {
   height: 100%;
 } 
+
+.content{
+  margin-top:90rpx;
+}
+
+.h1{
+  color:#666;
+  font-size:60rpx;
+  margin: 60rpx 30rpx 10rpx 30rpx;
+  border-bottom:1rpx #ddd solid;
+  padding-bottom:15rpx;
+}
+
+.tab{
+  position:fixed;
+  z-index:10;
+  top:0;
+  left:0;
+  background:#f8f8f8;
+  border-bottom: 1rpx #ddd solid;
+}
+
+.code{
+  display: inline-block;
+  margin:5%;
+  width: 90%;
+  margin-top:30rpx;
+  margin-bottom: 30rpx;
+  background: #eee;
+}
+
+.code text{
+  padding:20rpx;
+  white-space:nowrap;
+  font-size:26rpx;
+}

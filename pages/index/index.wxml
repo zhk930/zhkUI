@@ -1,10 +1,15 @@
 <!--pages/p-cell/p-cell.wxml-->
+<view>
+  <image src='../../zhkUI/assets/img/logo.png' background-size="cover" style='width:200rpx;height:200rpx;margin:80rpx 275rpx 0rpx 275rpx;'/>
+  <view style='width:100%;text-align:center;font-size:60rpx;color:#666;'>ZHK UI</view>
+</view>
 <zhkUI-panel title="基础控件" noPadding>
   <zhkUI-cell-group>
     <zhkUI-cell title="Button" link linkUrl="../p-button/p-button"></zhkUI-cell>
     <zhkUI-cell title="Cell" link linkUrl="../p-cell/p-cell"></zhkUI-cell>
     <zhkUI-cell title="Panel" link linkUrl="../p-panel/p-panel"></zhkUI-cell>
     <zhkUI-cell title="Title" link linkUrl="../p-title/p-title"></zhkUI-cell>
+    <zhkUI-cell title="Tab" link linkUrl="../p-tab/p-tab"></zhkUI-cell>
     <zhkUI-cell title="More" link linkUrl="../p-more/p-more"></zhkUI-cell>
   </zhkUI-cell-group>
 </zhkUI-panel>

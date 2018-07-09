@@ -6,6 +6,7 @@
     "pages/p-panel/p-panel",
     "pages/p-button/p-button",
     "pages/p-more/p-more",
+    "pages/p-tab/p-tab",
     "pages/logs/logs"
   ],
   "window": {

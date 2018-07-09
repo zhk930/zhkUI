@@ -50,7 +50,7 @@ name: notify
   font-size:30rpx;
   border-radius: 60rpx;
 }
-.zhkui-tab-view .bg-success,.bg-info,.bg-danger,.bg-warn{
+.zhkui-tab-view.bg-success,.bg-info,.bg-danger,.bg-warn{
   color: white;
   font-size:30rpx;
   border-radius: 60rpx;
@@ -59,10 +59,10 @@ name: notify
 .zhkui-tab-selected-line{
   display: block;
   position:absolute;
-  width: 80rpx;
+  width: 30rpx;
   height: 20rpx;
   top:82rpx;
   z-index: 2;
   transition:left 0.3s;
-  border-radius: 40rpx;
+  border-radius: 0rpx;
 }
