@@ -29,16 +29,5 @@ page{
 }
 
 .code{
-  display: inline-block;
-  margin:5%;
-  width: 90%;
-  margin-top:30rpx;
-  margin-bottom: 30rpx;
-  background: #eee;
-}
-
-.code text{
-  padding:20rpx;
-  white-space:nowrap;
-  font-size:26rpx;
+  padding:0rpx 0rpx 10rpx 0rpx;
 }

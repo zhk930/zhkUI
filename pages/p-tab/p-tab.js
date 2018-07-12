@@ -1,22 +1,24 @@
-const app = getApp() 
 
-var codeContent = '<zhkUI-tab pattern="LINE" col="3" list=\'[{ "title": "已预约" }, { "title": "待支付" }, { "title": "已支付" }, { "title": "待发货" }, { "title": "已发货" }, { "title": "已完成" }]\' current="0"></zhkUI-tab>\r\n\r\t<zhkUI-tab pattern="LINE" col="3" list=\'[{ "title": "已预约" }, { "title": "待支付" }, { "title": "已支付" }, { "title": "待发货" }, { "title": "已发货" }, { "title": "已完成" }]\' current="0"></zhkUI-tab>'
+var wxmlCode = require('./wxml.md')
+var jsCode = require('./js.md')
+var jsonCode = require('./json.md')
+
 
 Page({ 
   data:{
-    tabDisplay:["display","none","none"]
+    wxmlCode: wxmlCode,
+    jsCode: jsCode,
+    jsonCode: jsonCode,
+    tabDisplay:["display","none","none"],
+    codeTabDisplay:["display", "none", "none"]
   },
   onLoad: function () {
-    this.codeInit()
     this.tab = this.selectComponent("#tab")
+    this.codeTab = this.selectComponent("#codeTab")
     this.notify = this.selectComponent("#notify")
     this.tab1 = this.selectComponent("#tab1")
   },
-  codeInit: function (){
-    this.setData({ codeContent: codeContent})
-  },
-  /** * 生命周期函数--监听页面初次渲染完成 */ 
-  onReady: function () { 
+  onReady: function () {
   }, 
   bindTabChange: function (e) {
     var current = e.detail.current
@@ -26,6 +28,16 @@ Page({
       this.setData({ tabDisplay: ["none", "display", "none"] })
     } else if (current == 2){
       this.setData({ tabDisplay: ["none", "none", "display"] })
+    }
+  },
+  bindCodeTabChange:function (e){
+    var current = e.detail.current
+    if (current == 0) {
+      this.setData({ codeTabDisplay: ["display", "none", "none"] })
+    } else if (current == 1) {
+      this.setData({ codeTabDisplay: ["none", "display", "none"] })
+    } else if (current == 2) {
+      this.setData({ codeTabDisplay: ["none", "none", "display"] })
     }
   },
   bindTabChange1: function (e) {

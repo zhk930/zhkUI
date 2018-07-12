@@ -14,5 +14,11 @@
     "navigationBarBackgroundColor": "#f8f8f8",
     "navigationBarTitleText": "AAAA",
     "navigationBarTextStyle": "black"
+  },
+  "plugins": {
+    "htmltowxml": {
+      "version": "1.2.0",
+      "provider": "wxa51b9c855ae38f3c"
+    }
   }
 }

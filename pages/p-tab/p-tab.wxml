@@ -1,4 +1,5 @@
 
+
 <view class='tab'>
   <zhkUI-tab id="tab" pattern="LINE" type="SUCCESS" col="3" list='[{"title": "示例"},{"title": "代码"},{"title": "API"}]' current="0" bind:changeEvent="bindTabChange"></zhkUI-tab>
 </view>
@@ -36,9 +37,19 @@
   </view>
 
   <view class='container' style='display:{{tabDisplay[1]}}'>
-    <scroll-view class="code" scroll-x="true">
-      <text>{{codeContent}}</text>
-    </scroll-view>
+    <view style='padding:20rpx 0rpx;transform:scale(0.8)'>
+      <zhkUI-tab id="codeTab" pattern="BUTTON" type="DANGER" col="3" list='[{"title": "Wxml"},{"title": "Js"},{"title": "Json"}]' current="0" bind:changeEvent="bindCodeTabChange"></zhkUI-tab>
+    </view>
+
+    <view class='code' style='display:{{codeTabDisplay[0]}}'>
+      <htmltowxml text="{{wxmlCode}}" type="md" bindWxmlTagATap="wxmlTagATap" />
+    </view>
+    <view class='code' style='display:{{codeTabDisplay[1]}}'>
+      <htmltowxml text="{{jsCode}}" type="md" bindWxmlTagATap="wxmlTagATap" />
+    </view>
+    <view class='code' style='display:{{codeTabDisplay[2]}}'>
+      <htmltowxml text="{{jsonCode}}" type="md" bindWxmlTagATap="wxmlTagATap" />
+    </view>
   </view>
 
   <view class='container' style='display:{{tabDisplay[2]}}'>
