@@ -42,18 +42,20 @@
     </view>
 
     <view class='code' style='display:{{codeTabDisplay[0]}}'>
-      <htmltowxml text="{{wxmlCode}}" type="md" bindWxmlTagATap="wxmlTagATap" />
+      <htmltowxml text="{{wxmlCode}}" type="md" />
     </view>
     <view class='code' style='display:{{codeTabDisplay[1]}}'>
-      <htmltowxml text="{{jsCode}}" type="md" bindWxmlTagATap="wxmlTagATap" />
+      <htmltowxml text="{{jsCode}}" type="md" />
     </view>
     <view class='code' style='display:{{codeTabDisplay[2]}}'>
-      <htmltowxml text="{{jsonCode}}" type="md" bindWxmlTagATap="wxmlTagATap" />
+      <htmltowxml text="{{jsonCode}}" type="md" />
     </view>
   </view>
 
   <view class='container' style='display:{{tabDisplay[2]}}'>
-    3
+    <view class='code'>
+      <htmltowxml text="{{apiCode}}" type="md" />
+    </view>
   </view>
   
 </view>

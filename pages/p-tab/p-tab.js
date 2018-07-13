@@ -2,6 +2,7 @@
 var wxmlCode = require('./wxml.md')
 var jsCode = require('./js.md')
 var jsonCode = require('./json.md')
+var apiCode = require('./api.md')
 
 
 Page({ 
@@ -10,7 +11,8 @@ Page({
     jsCode: jsCode,
     jsonCode: jsonCode,
     tabDisplay:["display","none","none"],
-    codeTabDisplay:["display", "none", "none"]
+    codeTabDisplay:["display", "none", "none"],
+    apiCode:apiCode
   },
   onLoad: function () {
     this.tab = this.selectComponent("#tab")
