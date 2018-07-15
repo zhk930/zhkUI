@@ -3,6 +3,10 @@ creator: ZHK
 components:zhkUI
 name: panel
 */
+
+var NoBorder
+var NoPadding
+
 Component({
   options: {
     multipleSlots: true // 在组件定义时的选项中启用多slot支持
@@ -35,42 +39,73 @@ Component({
     _noBorder: '',
     _title: '',
     _titleDisplay: 'none',
-    _marginTop: '0',
-    _marginBottom: '0',
+    _marginTop: 0,
+    _marginBottom: 0,
     _noPadding: ''
   },
   ready: function () {
-    if (!this.properties.noBorder){
-      this.setData({ _noBorder: 'zhkui-panel-border'})
-    }
-    if (this.properties.title != "") {
-      this.setData({ 
-        _title: this.properties.title,
-        _titleDisplay: "block"
-      })
-    }else{
-      this.setData({
-        _marginTop: '30rpx'
-      })
-    }
-    if (this.properties.top != "") {
-      this.setData({
-        _marginTop: this.properties.top
-      })
-    }
-    if (this.properties.bottom != "") {
-      this.setData({
-        _marginBottom: this.properties.bottom
-      })
-    }
-    if (this.properties.noPadding) {
-      this.setData({
-        _noPadding: 'zhkui-panel-nopadding'
-      })
-    }
+    var noBorder = this.properties.noBoder
+    var title = this.properties.title
+    var top = this.properties.top
+    var bottom = this.properties.bottom
+    var noPadding = this.properties.noPadding
+    this._init(noBorder, title, top, bottom, noPadding)
   },
   /** * 组件的方法列表 * 更新属性和数据的方法与更新页面数据的方法类似 */
   methods: {
-    
+    //设置 
+    set(options) {
+      var obj = options == undefined ? {} : options
+      if (obj == undefined) {
+        return false
+      }
+      var noBorder = obj.noBorder == undefined ? this.Noborder : obj.noBorder
+      var title = obj.title == undefined ? this.properties.title : obj.title
+      var top = obj.top == undefined ? this.properties.top : obj.top
+      var bottom = obj.bottom == undefined ? this.properties.bottom : obj.bottom
+      var noPadding = obj.noPadding == undefined ? this.NoPadding : obj.noPadding
+      this._init(noBorder, title, top, bottom, noPadding)
+    },
+    //init
+    _init(noBorder, title, top, bottom, noPadding) {
+      this.NoBorder = noBorder
+      if (!noBorder) {
+        this.setData({ _noBorder: 'zhkui-panel-border' })
+      }else{
+        this.setData({ _noBorder: '' })
+      }
+      if (title != "") {
+        this.setData({
+          _title: title,
+          _titleDisplay: "block"
+        })
+      } else {
+        this.setData({
+          _marginTop: '30rpx',
+          _titleDisplay: "none"
+        })
+      }
+      if (top != "") {
+        this.setData({
+          _marginTop: top
+        })
+      }
+      if (bottom != "") {
+        this.setData({
+          _marginBottom: bottom
+        })
+      }
+
+      this.NoPadding = noPadding
+      if (noPadding) {
+        this.setData({
+          _noPadding: 'zhkui-panel-nopadding'
+        })
+      }else{
+        this.setData({
+          _noPadding: ''
+        })
+      }
+    }
   }
 })

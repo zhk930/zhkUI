@@ -6,15 +6,26 @@
 <view class='content'>
 
   <view class='container' style='display:{{tabDisplay[0]}}'>
-    <zhkUI-panel title="不带边框" noBorder>不带边框Panel</zhkUI-panel>
-    <zhkUI-panel title="带边框">带边框Panel</zhkUI-panel>
-    <zhkUI-panel title="内边距" noPadding>取消内边距</zhkUI-panel>
-    <zhkUI-panel title="底部边距" bottom="80rpx">距离底部80rpx</zhkUI-panel>
-    <zhkUI-panel>不带标题Panel</zhkUI-panel>
-    <zhkUI-panel title="顶部边距" top="50rpx">距离顶部50rpx</zhkUI-panel>
-    <zhkUI-panel id="panel" title="标题">Panel内容</zhkUI-panel>
     <zhkUI-panel>
-      <zhkUI-button type="WARN" size="LARGE" bindtap="bindChangePanel">动态设置Panel属性</zhkUI-button>
+      <zhkUI-button type="WHITE" size="LARGE" data-type="0" bindtap="bindNotifyShow">默认Notify</zhkUI-button>
+    </zhkUI-panel>
+    <zhkUI-panel>
+      <zhkUI-button type="DANGER" size="LARGE" data-type="1" bindtap="bindNotifyShow">DANGER Notify</zhkUI-button>
+    </zhkUI-panel>
+    <zhkUI-panel>
+      <zhkUI-button type="SUCCESS" size="LARGE" data-type="2" bindtap="bindNotifyShow">SUCCESS Notify</zhkUI-button>
+    </zhkUI-panel>
+    <zhkUI-panel>
+      <zhkUI-button type="INFO" size="LARGE" data-type="3" bindtap="bindNotifyShow">INFO Notify</zhkUI-button>
+    </zhkUI-panel>
+    <zhkUI-panel>
+      <zhkUI-button type="WARN" size="LARGE" data-type="4" bindtap="bindNotifyShow">WARN Notify</zhkUI-button>
+    </zhkUI-panel>
+    <zhkUI-panel>
+      <zhkUI-button type="WHITE" size="LARGE" data-type="5" bindtap="bindNotifyShow">底部出现Notify</zhkUI-button>
+    </zhkUI-panel>
+    <zhkUI-panel>
+      <zhkUI-button type="WHITE" size="LARGE" data-type="6" bindtap="bindNotifyShow">Notify显示后一秒钟消失</zhkUI-button>
     </zhkUI-panel>
   </view>
 
@@ -35,10 +46,12 @@
   </view>
 
   <view class='container' style='display:{{tabDisplay[2]}}'>
-    <view class='h1'>Panel</view>
+    <view class='h1'>Notify</view>
     <view class='code'>
       <htmltowxml text="{{apiCode}}" type="md" />
     </view>
   </view>
 
 </view>
+
+<zhkUI-notify id="notify" message="这是默认Notify"></zhkUI-notify>

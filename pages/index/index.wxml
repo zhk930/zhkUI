@@ -13,3 +13,10 @@
     <zhkUI-cell title="More" link linkUrl="../p-more/p-more"></zhkUI-cell>
   </zhkUI-cell-group>
 </zhkUI-panel>
+
+<zhkUI-panel title="交互控件" noPadding>
+  <zhkUI-cell-group>
+    <zhkUI-cell title="Toast" link linkUrl="../p-toast/p-toast"></zhkUI-cell>
+    <zhkUI-cell title="Notify" link linkUrl="../p-notify/p-notify"></zhkUI-cell>
+  </zhkUI-cell-group>
+</zhkUI-panel>

@@ -5,7 +5,7 @@ components:zhkUI
 name: toast
 */
 -->
-<view class='zhkui-toast-view' animation="{{animationData}}" style='{{style}}'>
-  <view class='zhkui-toast-msg'>{{ message }}</view>
+<view class='zhkui-toast-view' animation="{{_animationData}}" style='{{_style}}'>
+  <view class='zhkui-toast-msg'>{{ _message }}</view>
 </view>
 

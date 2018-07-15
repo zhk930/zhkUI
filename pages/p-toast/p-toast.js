@@ -15,7 +15,8 @@ Page({
   onLoad: function () {
     this.tab = this.selectComponent("#tab")
     this.codeTab = this.selectComponent("#codeTab")
-    this.panel = this.selectComponent("#panel")
+    this.toast = this.selectComponent("#toast")
+    this.toast1 = this.selectComponent("#toast1")
   },
   bindTabChange: function (e) {
     var current = e.detail.current
@@ -37,13 +38,21 @@ Page({
       this.setData({ codeTabDisplay: ["none", "none", "display"] })
     }
   },
-  bindChangePanel:function (){
-    this.panel.set({
-      noBorder: true,
-      title: "动态设置的标题",
-      top: "100rpx",
-      bottom: "100rpx",
-      noPadding: true
-    })
+  bindToastShow:function (e){
+    var $type = e.currentTarget.dataset.type
+    switch ($type) {
+      case "0":
+        this.toast.show()
+        break
+      case "1":
+        this.toast.show({ message: "这是动态设置的Toast" })
+        break
+      case "2":
+        this.toast.show({ message: "这是顶部出现Notify", direction: "TOP"})
+        break
+      case "3":
+        this.toast.show({ message: "这是Notify，一秒后消失", duration: 1000 })
+        break
+    }
   }
 })

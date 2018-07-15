@@ -1,9 +1,13 @@
+module.exports = `
+
+\`\`\`
 {
-  "navigationBarTitleText": "PANEL",
   "usingComponents": {
-    "htmltowxml": "plugin://htmltowxml/view",
     "zhkUI-tab": "/zhkUI/tab/tab",
     "zhkUI-panel": "/zhkUI/panel/panel",
     "zhkUI-button": "/zhkUI/button/button"
   }
 }
+\`\`\`
+
+`;

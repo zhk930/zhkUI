@@ -53,6 +53,7 @@
   </view>
 
   <view class='container' style='display:{{tabDisplay[2]}}'>
+    <view class='h1'>Tab</view>
     <view class='code'>
       <htmltowxml text="{{apiCode}}" type="md" />
     </view>

@@ -6,8 +6,6 @@ Page({
   onLoad: function () {
     this.notify = this.selectComponent("#notify")
     this.tab1 = this.selectComponent("#tab1")
-  }, 
-  onReady: function () {
   },
   bindTabChange1: function (e) {
     var title = e.detail.title

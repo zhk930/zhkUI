@@ -20,8 +20,6 @@ Page({
     this.notify = this.selectComponent("#notify")
     this.tab1 = this.selectComponent("#tab1")
   },
-  onReady: function () {
-  }, 
   bindTabChange: function (e) {
     var current = e.detail.current
     if (current == 0){

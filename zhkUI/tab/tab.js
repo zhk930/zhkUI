@@ -40,18 +40,18 @@ Component({
   }, 
   /** * 私有数据,组件的初始数据 * 可用于模版渲染 */ 
   data: {
-    listData: [],
-    itemWidth: 0,
-    selectedLinePattern: "",
-    selectedLineDisplay:"none"
+    _listData: [],
+    _itemWidth: 0,
+    _selectedLinePattern: "",
+    _selectedLineDisplay:"none"
   },
   ready: function (){
     var list = JSON.parse(this.properties.list)
     var col = this.properties.col
-    var _type = this.properties.type
+    var $type = this.properties.type
     var pattern = this.properties.pattern
     var current = this.properties.current
-    this._init(list, col, _type, pattern, current)
+    this._init(list, col, $type, pattern, current)
   },
   /** * 组件的方法列表 * 更新属性和数据的方法与更新页面数据的方法类似 */ 
   methods: { 
@@ -61,15 +61,15 @@ Component({
       if (obj == undefined){
         return false
       }
-      var list = obj.list == undefined ? this.data.listData : obj.list
+      var list = obj.list == undefined ? this.data._listData : obj.list
       var col = obj.col == undefined ? this.Col : obj.col
-      var _type = obj.type == undefined ? this.properties.type : obj.type
+      var $type = obj.type == undefined ? this.properties.type : obj.type
       var pattern = obj.pattern == pattern ? this.properties.pattern : obj.pattern
       var current = obj.current == current ? this.properties.current : obj.current
-      this._init(list, col, _type, pattern, current)
+      this._init(list, col, $type, pattern, current)
     },
     //init
-    _init(list, col, _type, pattern, current) {
+    _init(list, col, $type, pattern, current) {
       //col
       if (list.length < 5) {
         this.Col = list.length
@@ -79,13 +79,13 @@ Component({
       //selectedLinePattern
       var selectedLinePattern
       //classes
-      if (_type == "SUCCESS") {
+      if ($type == "SUCCESS") {
         this.Classes = pattern == "LINE" ? "text-success" : "bg-success border-success"
         selectedLinePattern = "bg-success"
-      } else if (_type == "DANGER") {
+      } else if ($type == "DANGER") {
         this.Classes = pattern == "LINE" ? "text-danger" : "bg-danger border-danger"
         selectedLinePattern = "bg-danger"
-      } else if (_type == "WARN") {
+      } else if ($type == "WARN") {
         this.Classes = pattern == "LINE" ? "text-warn" : "bg-warn border-warn"
         selectedLinePattern = "bg-warn"
       } else {
@@ -97,15 +97,16 @@ Component({
         btnOpacity.push("1.0")
       }
       this.setData({
-        listData: list,
-        itemWidth: parseInt(750 / this.Col),
-        btnOpacity: btnOpacity,
-        selectedLinePattern: selectedLinePattern,
+        _listData: list,
+        _itemWidth: parseInt(750 / this.Col),
+        _btnOpacity: btnOpacity,
+        _selectedLinePattern: selectedLinePattern,
+        _pattern: pattern
       })
       if (pattern == "LINE") {
-        this.setData({ selectedLineDisplay: "block" })
+        this.setData({ _selectedLineDisplay: "block" })
       }else{
-        this.setData({ selectedLineDisplay: "none" })
+        this.setData({ _selectedLineDisplay: "none" })
       }
       this.Pattern = pattern
       this._change(current)
@@ -113,21 +114,21 @@ Component({
     //按下监听
     _bindtouchstart(e) {
       var index = e.currentTarget.dataset.index   
-      var btnOpacity = this.data.btnOpacity
-      for (var i in this.data.listData) {
+      var btnOpacity = this.data._btnOpacity
+      for (var i in this.data._listData) {
         if (i == index) {
           btnOpacity.splice(index, 1, "0.6")
         }
       }
-      this.setData({ btnOpacity: btnOpacity})
+      this.setData({ _btnOpacity: btnOpacity})
     },
     //弹起
     _bindtouchend(){
       var btnOpacity = []
-      for (var i in this.data.listData) {
+      for (var i in this.data._listData) {
         btnOpacity.push("1.0")
       }
-      this.setData({ btnOpacity: btnOpacity })
+      this.setData({ _btnOpacity: btnOpacity })
     },
     //点击监听
     _catchtap(e){
@@ -136,8 +137,8 @@ Component({
     },
     //选中时执行
     _change(index){
-      index = index > this.data.listData.length-1 ? this.data.listData.length-1 : index
-      var list = this.data.listData
+      index = index > this.data._listData.length-1 ? this.data._listData.length-1 : index
+      var list = this.data._listData
       for (var i in list){
         if (i == index){
           list[i]["classes"] = this.Classes
@@ -146,12 +147,12 @@ Component({
         }        
       }
       this.setData({
-        listData: list,
-        scrollInto: "item-"+ (index-1),
-        selectedLineLeft: parseInt(750 / this.Col) * index + (parseInt(750 / this.Col) - 30) / 2
+        _listData: list,
+        _scrollInto: "item-"+ (index-1),
+        _selectedLineLeft: parseInt(750 / this.Col) * index + (parseInt(750 / this.Col) - 30) / 2
       })
       //触发change回调 
-      this.triggerEvent("changeEvent", { current: index, title: this.data.listData[index].title }) 
+      this.triggerEvent("changeEvent", { current: index, title: this.data._listData[index].title }) 
     }
   } 
 })

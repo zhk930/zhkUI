@@ -1,9 +1,10 @@
 {
-  "navigationBarTitleText": "PANEL",
+  "navigationBarTitleText": "Toast",
   "usingComponents": {
     "htmltowxml": "plugin://htmltowxml/view",
     "zhkUI-tab": "/zhkUI/tab/tab",
     "zhkUI-panel": "/zhkUI/panel/panel",
-    "zhkUI-button": "/zhkUI/button/button"
+    "zhkUI-button": "/zhkUI/button/button",
+    "zhkUI-toast": "/zhkUI/toast/toast"
   }
 }

@@ -7,6 +7,8 @@
     "pages/p-button/p-button",
     "pages/p-more/p-more",
     "pages/p-tab/p-tab",
+    "pages/p-toast/p-toast",
+    "pages/p-notify/p-notify",
     "pages/logs/logs"
   ],
   "window": {

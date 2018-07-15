@@ -13,7 +13,7 @@ Component({
   properties: { 
     //类型
     type: {
-      type: String, value: 'INFO'
+      type: String, value: 'INFO' //INFO/SUCCESS/DANGER/WARN
     },
     // 消息内容 
     message: {  
@@ -36,7 +36,7 @@ Component({
     backgroundClass: "bg-info-9" //背景颜色
   }, 
   ready: function () {
-    this.setData({ style: "top:-60px;" })
+    this.setData({ style: "top:-70px;" })
   },
   /** * 组件的方法列表 * 更新属性和数据的方法与更新页面数据的方法类似 */ 
   methods: { 

@@ -1,9 +1,5 @@
 module.exports = `
 
-# 
-
-# Tab
----
 
 ## 属性
 
@@ -65,7 +61,7 @@ WARN | String | -
 
 属性值 | 类型 | 描述
 ---|---|---
-1~4 | Int | -
+1~4 | Number | -
 
 默认值: 4
 
@@ -115,7 +111,7 @@ title | String | 显示的文字标题
 
 属性值 | 类型 | 描述
 ---|---|---
-0~无穷大 | Int | -
+0~无穷大 | Number | -
 
 默认值: 0
 
@@ -183,8 +179,8 @@ bindTabChange: function (e) {
 
 参数 | 类型 | 位置
 ---|---|---
-current | Int | e.detail.current
-title | Int | e.detail.title
+current | Number | e.detail.current
+title | Number | e.detail.title
 
 
 `;

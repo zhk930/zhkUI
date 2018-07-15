@@ -3,7 +3,8 @@ creator: ZHK
 components:zhkUI
 name: toast
 */
-var that
+
+var SetTimeout
 
 Component({
   options: {
@@ -27,10 +28,10 @@ Component({
   }, 
   /** * 私有数据,组件的初始数据 * 可用于模版渲染 */ 
   data: {
-    style: "bottom:0",
-    message: '',
+    _style: "bottom:0px",
+    _message: '',
     // 动画
-    animationData:{} 
+    _animationData:{} 
   }, 
   /** * 组件的方法列表 * 更新属性和数据的方法与更新页面数据的方法类似 */ 
   methods: { 
@@ -38,14 +39,16 @@ Component({
     show(options){
       var obj = options == undefined ? {} : options
       this.setData({
-        message: obj.message == undefined ? this.properties.message : obj.message
+        _message: obj.message == undefined ? this.properties.message : obj.message
       })
-      var y = 80
+      var y = 30
       var direction = obj.direction == undefined ? this.properties.direction : obj.direction
       var duration = obj.duration == undefined ? this.properties.duration : obj.duration
       if (direction === "TOP"){
         y = -y
-        this.setData({ style: "top:0" })
+        this.setData({ _style: "top:0px;bottom:auto;" })
+      } else {
+        this.setData({ _style: "bottom:0px;top:auto;" })
       }
       if (duration < 1000 || duration > 10000){
         duration = 3000
@@ -54,21 +57,27 @@ Component({
         duration: 500,
         timingFunction: 'ease',
       })
+      clearTimeout(SetTimeout)
       animation.opacity(1).translateY(-y).step()
       this.setData({
-        animationData: animation.export()
+        _animationData: animation.export()
       })
-      that = this
+      var that = this
       //延时隐藏
-      setTimeout(function () {
+      SetTimeout = setTimeout(function () {
         var animation = wx.createAnimation({
           duration: 500,
           timingFunction: 'ease',
         })
         animation.opacity(0).translateY(y).step()
         that.setData({
-          animationData: animation.export()
+          _animationData: animation.export()
         })
+        // if (direction === "TOP") {
+        //   that.setData({ _style: "top:"+(-y) })
+        // } else {
+        //   that.setData({ _style: "bottom:-"+y+"px" })
+        // }
       }, duration)
     }
   } 
