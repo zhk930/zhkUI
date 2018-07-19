@@ -9,6 +9,7 @@
     "pages/p-tab/p-tab",
     "pages/p-toast/p-toast",
     "pages/p-notify/p-notify",
+    "pages/p-toptip/p-toptip",
     "pages/logs/logs"
   ],
   "window": {

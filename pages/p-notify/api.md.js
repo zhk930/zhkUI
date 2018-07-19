@@ -51,7 +51,7 @@ WARN | String | -
 示例:
 
 \`\`\`
-<zhkUI-notify message="这是默认Notify" duration=“1000”></zhkUI-notify>
+<zhkUI-notify message="这是默认Notify" duration="1000"></zhkUI-notify>
 \`\`\`
 
 参数

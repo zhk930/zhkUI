@@ -103,7 +103,7 @@ false | Boolean | -
 
 ### set(options)
 
-设置Tab的属性
+设置Panel的属性
 
 示例:
 

@@ -54,4 +54,4 @@
 
 </view>
 
-<zhkUI-notify id="notify" message="这是默认Notify"></zhkUI-notify>
+<zhkUI-notify id="notify"></zhkUI-notify>

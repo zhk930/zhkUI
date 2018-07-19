@@ -28,7 +28,7 @@ module.exports = `
 示例:
 
 \`\`\`
-<zhkUI-toast id="toast" message="这是默认Toast" duration=“1000”></zhkUI-toast>
+<zhkUI-toast id="toast" message="这是默认Toast" duration="1000"></zhkUI-toast>
 \`\`\`
 
 参数

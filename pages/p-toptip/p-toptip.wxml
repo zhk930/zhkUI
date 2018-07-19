@@ -7,16 +7,22 @@
 
   <view class='container' style='display:{{tabDisplay[0]}}'>
     <zhkUI-panel>
-      <zhkUI-button type="WHITE" size="LARGE" data-type="0" bindtap="bindToastShow">默认Toast</zhkUI-button>
+      <zhkUI-button type="WHITE" size="LARGE" data-type="0" bindtap="bindToptipShow">默认TopTip</zhkUI-button>
     </zhkUI-panel>
     <zhkUI-panel>
-      <zhkUI-button type="DANGER" size="LARGE" data-type="1" bindtap="bindToastShow">动态设置Toast</zhkUI-button>
+      <zhkUI-button type="DANGER" size="LARGE" data-type="1" bindtap="bindToptipShow">DANGER TopTip</zhkUI-button>
     </zhkUI-panel>
     <zhkUI-panel>
-      <zhkUI-button type="SUCCESS" size="LARGE" data-type="2" bindtap="bindToastShow">顶部出现Toast</zhkUI-button>
+      <zhkUI-button type="SUCCESS" size="LARGE" data-type="2" bindtap="bindToptipShow">SUCCESS TopTip</zhkUI-button>
     </zhkUI-panel>
     <zhkUI-panel>
-      <zhkUI-button type="INFO" size="LARGE" data-type="3" bindtap="bindToastShow">Toast一秒后消失</zhkUI-button>
+      <zhkUI-button type="INFO" size="LARGE" data-type="3" bindtap="bindToptipShow">INFO TopTip</zhkUI-button>
+    </zhkUI-panel>
+    <zhkUI-panel>
+      <zhkUI-button type="WARN" size="LARGE" data-type="4" bindtap="bindToptipShow">WARN TopTip</zhkUI-button>
+    </zhkUI-panel>
+    <zhkUI-panel>
+      <zhkUI-button type="WHITE" size="LARGE" data-type="5" bindtap="bindToptipShow">TopTip显示后一秒钟消失</zhkUI-button>
     </zhkUI-panel>
   </view>
 
@@ -37,7 +43,7 @@
   </view>
 
   <view class='container' style='display:{{tabDisplay[2]}}'>
-    <view class='h1'>Toast</view>
+    <view class='h1'>TopTip</view>
     <view class='code'>
       <htmltowxml text="{{apiCode}}" type="md" />
     </view>
@@ -45,4 +51,4 @@
 
 </view>
 
-<zhkUI-toast id="toast"></zhkUI-toast>
+<zhkUI-toptip id="toptip"></zhkUI-toptip>

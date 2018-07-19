@@ -18,5 +18,6 @@
   <zhkUI-cell-group>
     <zhkUI-cell title="Toast" link linkUrl="../p-toast/p-toast"></zhkUI-cell>
     <zhkUI-cell title="Notify" link linkUrl="../p-notify/p-notify"></zhkUI-cell>
+    <zhkUI-cell title="TopTip" link linkUrl="../p-toptip/p-toptip"></zhkUI-cell>
   </zhkUI-cell-group>
 </zhkUI-panel>

@@ -15,8 +15,7 @@ Page({
   onLoad: function () {
     this.tab = this.selectComponent("#tab")
     this.codeTab = this.selectComponent("#codeTab")
-    this.toast = this.selectComponent("#toast")
-    this.toast1 = this.selectComponent("#toast1")
+    this.toptip = this.selectComponent("#toptip")
   },
   bindTabChange: function (e) {
     var current = e.detail.current
@@ -38,20 +37,26 @@ Page({
       this.setData({ codeTabDisplay: ["none", "none", "display"] })
     }
   },
-  bindToastShow:function (e){
+  bindToptipShow:function (e){
     var $type = e.currentTarget.dataset.type
     switch ($type) {
       case "0":
-        this.toast.show()
+        this.toptip.show()
         break
       case "1":
-        this.toast.show({ message: "这是动态设置的Toast" })
+        this.toptip.show({ message: "DANGER TopTip", type: "DANGER" })
         break
       case "2":
-        this.toast.show({ message: "这是顶部出现Toast", direction: "TOP"})
+        this.toptip.show({ message: "SUCCESS TopTip", type: "SUCCESS"})
         break
       case "3":
-        this.toast.show({ message: "这是Toast，一秒后消失", duration: 1000 })
+        this.toptip.show({ message: "INFO TopTip", type: "INFO" })
+        break
+      case "4":
+        this.toptip.show({ message: "WARN TopTip", type: "WARN" })
+        break
+      case "5":
+        this.toptip.show({ message: "这是TopTip，一秒后消失", duration: 1000 })
         break
     }
   }

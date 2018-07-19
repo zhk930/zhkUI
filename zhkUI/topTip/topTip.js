@@ -3,7 +3,7 @@ creator: ZHK
 components:zhkUI
 name: topTip
 */
-var that
+var SetTimeout
 
 Component({
   options: {
@@ -61,14 +61,16 @@ Component({
         duration: 500,
         timingFunction: 'ease',
       })
+      clearTimeout(SetTimeout)
+      //显示动画
       animation.opacity(1).translateY(-y).step()
       this.setData({
         animationData: animation.export(),
         backgroundClass: backgroundClass
       })
-      that = this
+      var that = this
       //延时隐藏
-      setTimeout(function () {
+      SetTimeout = setTimeout(function () {
         var animation = wx.createAnimation({
           duration: 500,
           timingFunction: 'ease',
